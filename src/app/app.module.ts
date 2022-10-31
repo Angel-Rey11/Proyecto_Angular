@@ -14,6 +14,9 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { environment } from '../environments/environment';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { FormsModule } from '@angular/forms';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
@@ -21,8 +24,11 @@ import { ServiceWorkerModule } from '@angular/service-worker';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    MatSlideToggleModule,
     AppRoutingModule,
     ButtonComponent,
+    MatToolbarModule,
     NavbarComponent,
     HttpClientModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),

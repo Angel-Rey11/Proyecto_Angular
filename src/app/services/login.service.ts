@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { SocialAuthService, SocialUser } from "@abacritt/angularx-social-login";
 import { GoogleLoginProvider } from "@abacritt/angularx-social-login";
+import { AngularFirestore, AngularFirestoreCollection, DocumentReference } from '@angular/fire/compat/firestore';
 import { Router } from '@angular/router';
 
 @Injectable({
@@ -11,9 +12,11 @@ export class LoginService {
   user!: SocialUser;
   loggedIn!: boolean;
   originalPath!:string;
+  private dbPath = '/users';
+  notesRef!: AngularFirestoreCollection<any>;
 
   constructor(private authService: SocialAuthService,
-    private router:Router) {
+    private router:Router,private db: AngularFirestore) {
 
     this.authService.authState.subscribe((user) => {
       this.user = user;

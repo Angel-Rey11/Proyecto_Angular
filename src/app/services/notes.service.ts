@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { INote } from '../model/INote';
 import { AngularFirestore, AngularFirestoreCollection, DocumentReference } from '@angular/fire/compat/firestore';
 import { Title } from '@angular/platform-browser';
+import { LoginService } from './login.service';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +14,7 @@ export class NotesService {
 
   public notes:INote[] = [
   ];
-  constructor(private db: AngularFirestore) {
+  constructor(private db: AngularFirestore, private user: LoginService) {
     this.notesRef = db.collection(this.dbPath);
 
     //Cargar todas las notas del servidor
@@ -35,6 +36,8 @@ export class NotesService {
      * Conectar firebase
      */
     try{
+      let idUser = this.user.user.id;
+      let dRef2:DocumentReference<any> = await this.notesRef.add(idUser);
       let {id,...newNoteWithoutID} = newNote;
     let dRef:DocumentReference<any> = await this.notesRef.add({...newNoteWithoutID});
       newNote.id=dRef.id;
