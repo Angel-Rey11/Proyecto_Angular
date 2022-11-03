@@ -47,6 +47,7 @@ export class FormNoteComponent implements OnInit {
       title: this.form.value.title,
       description: this.form.value.description
     }
+    
     this.onsubmit.emit(newNote);
     //this.form.reset();
   }

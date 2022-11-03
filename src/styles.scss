@@ -1,4 +1,4 @@
-@import "~@angular/material/theming";
+@import "@angular/material/theming";
 @include mat-core();
 asl-google-signin-button div{
   display:flex;
@@ -33,6 +33,36 @@ $app-light-theme: mat-light-theme($mat-primary-palette, $mat-accent-palette);
 
 .light-mode {
   @include angular-material-theme($app-light-theme);
+
+  background-color: rgb(243, 229, 212);
+
+  nav{
+    background-color: rgb(187, 169, 145) !important;
+    .nav-item {
+      background-color:  rgb(187, 169, 145) !important;
+      .dropdown-menu {
+        background-color:  rgb(187, 169, 145) !important;
+        .dropdown-item {
+          background-color:  rgb(187, 169, 145) !important;
+        }
+        li {
+          background-color:  rgb(187, 169, 145) !important;
+        }
+      }
+    }
+  }
+  .modal {
+    .modal-dialog {
+      background-color: rgb(187, 169, 145) !important;
+      .modal-content {
+        background-color: rgb(187, 169, 145) !important;
+        .modal-header {
+          background-color: rgb(187, 169, 145) !important;
+        }
+      }
+    }
+   
+  }
 }
 
 $app-dark-theme: mat-dark-theme($mat-primary-palette, $mat-accent-palette);
@@ -48,17 +78,49 @@ $app-dark-theme: mat-dark-theme($mat-primary-palette, $mat-accent-palette);
     color: white;
   }
   nav{
-    background-color: #333 !important;
+    background-color: rgb(124, 116, 116) !important;
     .navbar-brand{
       color:white;
     }
 
       .nav-link{
-        color:white;
+        color:white !important;
+        background-color:  rgb(124, 116, 116) !important;
+      }
+      .nav-item {
+        background-color:  rgb(124, 116, 116) !important;
+        .dropdown-menu {
+          background-color:  rgb(124, 116, 116) !important;
+          .dropdown-item {
+            background-color:  rgb(124, 116, 116) !important;
+            color:white;
+          }
+          li {
+            background-color:  rgb(124, 116, 116) !important;
+          }
+        }
       }
     .navbar-toggler-icon{
       filter: invert(99%) sepia(1%) saturate(4214%) hue-rotate(223deg) brightness(118%) contrast(100%);
     }
   }
+
+  .modal {
+    .modal-dialog {
+      background-color:  rgb(124, 116, 116) !important;
+      .modal-content {
+        background-color: rgb(124, 116, 116) !important;
+        .modal-header {
+          background-color:  rgb(124, 116, 116) !important;
+        }
+      }
+    }
+   
+  }
 }
+
+.dar {
+  margin-left: 95%;
+}
+
 

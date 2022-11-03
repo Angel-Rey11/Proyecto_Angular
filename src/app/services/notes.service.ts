@@ -15,7 +15,7 @@ export class NotesService {
   public notes:INote[] = [
   ];
   constructor(private db: AngularFirestore, private user: LoginService) {
-    this.notesRef = db.collection(this.dbPath);
+    this.notesRef = db.collection(this.user.user.id);
 
     //Cargar todas las notas del servidor
     this.notesRef.get().subscribe(d=>{
@@ -37,9 +37,8 @@ export class NotesService {
      */
     try{
       let idUser = this.user.user.id;
-      let dRef2:DocumentReference<any> = await this.notesRef.add(idUser);
       let {id,...newNoteWithoutID} = newNote;
-    let dRef:DocumentReference<any> = await this.notesRef.add({...newNoteWithoutID});
+      let dRef:DocumentReference<any> = await this.db.collection(idUser).add({...newNoteWithoutID});
       newNote.id=dRef.id;
       this.notes.push(newNote);
     }catch(err){
@@ -59,7 +58,7 @@ export class NotesService {
     this.notes = newNotes;
     return this.notesRef.doc(id).delete();  
   }
-  public getNotes():INote[]{
+  public getNotes():INote[] {
     return this.notes;
   }
   public updateNote(note:INote):Promise<void>{

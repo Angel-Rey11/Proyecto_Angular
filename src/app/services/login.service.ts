@@ -22,7 +22,7 @@ export class LoginService {
       this.user = user;
       this.loggedIn = (user != null);
       if(this.loggedIn){
-        if(this.originalPath){
+        if(this.originalPath){  
           this.router.navigate([this.originalPath]);
           this.originalPath='';
         }else
@@ -35,6 +35,7 @@ export class LoginService {
   isAuth():boolean{
     return this.loggedIn;
   }
+  
   async refreshToken(): Promise<void> {
     return this.authService.refreshAuthToken(GoogleLoginProvider.PROVIDER_ID);
   }
@@ -45,5 +46,4 @@ export class LoginService {
   async signOut(): Promise<void> {
     return await this.authService.signOut();
   }
-
 }
