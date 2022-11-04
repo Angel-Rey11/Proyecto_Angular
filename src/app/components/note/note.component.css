@@ -1,4 +1,23 @@
 .table {
     font-size: 16px;
     background-color:rgb(187, 169, 145);
+    width: 75%;
+    margin-left: 12%;
+
+}
+
+.cabesa {
+    width: 5%;
+}
+
+.cabesa2 {
+    width: 7%;
+}
+
+.cabesa3 {
+    width: 2%;
+}
+
+.cabesa4 {
+    width: 2%;
 }

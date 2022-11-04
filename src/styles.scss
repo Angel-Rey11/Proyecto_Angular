@@ -34,6 +34,10 @@ $app-light-theme: mat-light-theme($mat-primary-palette, $mat-accent-palette);
 .light-mode {
   @include angular-material-theme($app-light-theme);
 
+  .form-control {
+    background-color: rgb(187, 169, 145) !important;
+  }
+
   background-color: rgb(243, 229, 212);
 
   nav{
@@ -69,6 +73,17 @@ $app-dark-theme: mat-dark-theme($mat-primary-palette, $mat-accent-palette);
 
 .dark-mode {
   @include angular-material-theme($app-dark-theme);
+
+  .form-control {
+    background-color: #333 !important;
+    color: white !important;
+    &input:focus {
+      color: white !important;
+    }
+    &input::placeholder {
+      color: white !important;
+    }
+  }
 
   background-color: #333 !important;
   color: whitesmoke;
