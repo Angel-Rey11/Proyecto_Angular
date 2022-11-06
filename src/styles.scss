@@ -74,6 +74,10 @@ $app-dark-theme: mat-dark-theme($mat-primary-palette, $mat-accent-palette);
 .dark-mode {
   @include angular-material-theme($app-dark-theme);
 
+  .div1 {
+    background-color: rgb(124, 116, 116) !important;
+  }
+
   .form-control {
     background-color: #333 !important;
     color: white !important;
@@ -136,6 +140,16 @@ $app-dark-theme: mat-dark-theme($mat-primary-palette, $mat-accent-palette);
 
 .dar {
   margin-left: 95%;
+}
+
+#credential_picker_container {
+  display: none;
+}/* You can add global styles to this file, and also import other style files */
+asl-google-signin-button div{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align:center;
 }
 
 

@@ -1,0 +1,47 @@
+.div1 {
+    background-color: rgb(187, 169, 145);
+    height: 70vh;
+    width: 50%;
+    border-radius: 30px;
+    margin-top: 2%;
+    margin-left: 25%;
+}
+
+.div2 {
+    margin-top: 2%;
+    margin-left: 42%;
+}
+
+.radius {
+    border-radius: 50%;
+    margin-top: 5%;
+    margin-left: 33%;
+}
+
+.font {
+    text-align: center;
+    font-size: 18px;
+}
+
+.img1 {
+    width: 40px;
+    margin-top: 5%;
+    margin-left: 38%;
+}
+
+.img2 {
+    width: 60px;
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+hr {
+    height: 4px;
+    color: black;
+    background-color: black;
+}
+
+.font2 {
+    font-size: 20px;
+    margin-left: 10%;
+}

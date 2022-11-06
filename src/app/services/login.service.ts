@@ -3,6 +3,7 @@ import { SocialAuthService, SocialUser } from "@abacritt/angularx-social-login";
 import { GoogleLoginProvider } from "@abacritt/angularx-social-login";
 import { AngularFirestore, AngularFirestoreCollection, DocumentReference } from '@angular/fire/compat/firestore';
 import { Router } from '@angular/router';
+import { LocalstorageService } from './localstorage.service';
 
 @Injectable({
   providedIn: 'root'
@@ -16,12 +17,15 @@ export class LoginService {
   notesRef!: AngularFirestoreCollection<any>;
 
   constructor(private authService: SocialAuthService,
-    private router:Router,private db: AngularFirestore) {
+    private router:Router,private db: AngularFirestore,private local: LocalstorageService) {
 
     this.authService.authState.subscribe((user) => {
       this.user = user;
       this.loggedIn = (user != null);
       if(this.loggedIn){
+        this.local.remove('user');
+        this.local.set('user',user);
+        this.refreshToken;
         if(this.originalPath){  
           this.router.navigate([this.originalPath]);
           this.originalPath='';
