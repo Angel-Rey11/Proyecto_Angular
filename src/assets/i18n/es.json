@@ -9,5 +9,9 @@
     "Guardar":"Guardar",
     "Acerca de": "Acerca de",
     "Borrar": "Borrar",
-    "Cuenta": "Cuenta"
+    "Cuenta": "Cuenta",
+    "Desc": "El objetivo de este proyecto es un almacén de notas, donde podremos crear notas que se almacenan en una base de datos. Se implementa una base de datos en firebase y el login con google para tener nuestras notas privadas con las diferentes cuentas. Este proyecto también contiene el modo oscuro, donde cambiará todo el aspecto de la aplicacion.",
+    "Desc2": "Proyecto realizado por Angel Rey, estudiante de 2DAM, realizado con Angular.",
+    "Edit Note": "Editar Nota",
+    "Close": "Cerrar"
 }

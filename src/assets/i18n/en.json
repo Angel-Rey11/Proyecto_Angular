@@ -9,5 +9,9 @@
     "Guardar":"Save",
     "Acerca de": "About",
     "Borrar": "Remove",
-    "Cuenta": "Account"
+    "Cuenta": "Account",
+    "Desc": "The objective of this project is a note store, where we will be able to create notes that are stored in a database. A database is implemented in firebase and the login with google to have our private notes with the different accounts. This project also contains the dark mode, where the entire aspect of the application will change.",
+    "Desc2": "Project made by Angel Rey, 2DAM student, made with Angular.",
+    "Edit Note": "Edit Note",
+    "Close": "Close"
 }

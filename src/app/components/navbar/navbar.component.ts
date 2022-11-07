@@ -26,9 +26,11 @@ export class NavbarComponent implements OnInit {
 
   cambiarEspanol(){
     this.translate.use('es');
+    localStorage.setItem("language","es");
   }
   changeToEnglish(){
     this.translate.use('en');
+    localStorage.setItem("language","en");
   }
 
 }

@@ -19,7 +19,10 @@ export class LoginGuard implements CanActivate {
       let user:SocialUser = JSON.parse(this.localS.get('user')); 
       if(user!=null){
         this.loginS.user = user;
-        this.loginS.refreshToken();
+        setTimeout(()=>{
+          this.loginS.refreshToken();
+        },2000)
+        
         login=true;
       }
 

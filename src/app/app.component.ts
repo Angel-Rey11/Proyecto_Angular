@@ -17,7 +17,10 @@ export class AppComponent {
 
   constructor(private themeService: ThemeService, public translate:TranslateService) {
     this.translate.addLangs(['es','en']);
-    this.translate.setDefaultLang('es');
+    if(localStorage.getItem('language')){
+      translate.setDefaultLang(localStorage.getItem('language')!);
+      translate.use(localStorage.getItem('language')!);
+  }
     this.themeService.initTheme();
     this.isDarkMode = this.themeService.isDarkMode();
   }

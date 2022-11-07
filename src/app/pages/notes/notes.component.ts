@@ -12,7 +12,7 @@ import { TranslateModule } from '@ngx-translate/core';
   selector: 'app-notes',
   standalone: true,
   imports: [CommonModule,FormsModule,SharedModule,HighlightDirective,
-  FormNoteComponent],
+  FormNoteComponent,TranslateModule],
   templateUrl: './notes.component.html',
   styleUrls: ['./notes.component.css']
 })

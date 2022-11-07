@@ -25,7 +25,7 @@ export class LoginService {
       if(this.loggedIn){
         this.local.remove('user');
         this.local.set('user',user);
-        this.refreshToken;
+       
         if(this.originalPath){  
           this.router.navigate([this.originalPath]);
           this.originalPath='';
@@ -41,7 +41,7 @@ export class LoginService {
   }
   
   async refreshToken(): Promise<void> {
-    return this.authService.refreshAuthToken(GoogleLoginProvider.PROVIDER_ID);
+   // return this.authService.refreshAuthToken(GoogleLoginProvider.PROVIDER_ID);
   }
   /*
   async signInWithGoogle():Promise<SocialUser> {
