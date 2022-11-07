@@ -49,7 +49,7 @@ export class FormNoteComponent implements OnInit {
     }
     
     this.onsubmit.emit(newNote);
-    //this.form.reset();
+    this.form.reset();
   }
 
 }
