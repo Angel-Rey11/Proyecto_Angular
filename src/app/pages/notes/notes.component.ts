@@ -6,6 +6,7 @@ import { SharedModule } from '../../components/SharedModule';
 import { HighlightDirective } from '../../directives/highlight.directive';
 import { NotesService } from '../../services/notes.service';
 import { FormNoteComponent } from '../../components/form-note/form-note.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-notes',

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormNoteComponent } from '../../components/form-note/form-note.component';
 import { NotesService } from '../../services/notes.service';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-new',
